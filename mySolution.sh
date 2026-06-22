@@ -5,7 +5,7 @@ tar -xvzf secretGenerator.tar.gz
 
 
 # go to correct folder (safe even if run elsewhere)
-cd "$(dirname "$0")"
+cd src
 
 # clean / prepare environment
 rm -rf maliciousFiles
