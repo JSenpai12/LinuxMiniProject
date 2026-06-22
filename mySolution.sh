@@ -1,5 +1,8 @@
 #!/bin/bash
 
+wget https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/linux_project/secretGenerator.tar.gz
+tar -xvf secretGenerator.tar.gz
+
 # go to correct folder (safe even if run elsewhere)
 cd "$(dirname "$0")"
 
