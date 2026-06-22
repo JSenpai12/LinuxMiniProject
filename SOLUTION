@@ -1,34 +1,15 @@
-#Test1
-pwd
+#!/bin/bash
 
-cd src
+# go to correct folder (safe even if run elsewhere)
+cd "$(dirname "$0")"
 
-pwd
-
-mkdir secretDir
-
-rm -r maliciousFiles
-
-touch secretDir/.secret
-
-cd secretDir
-
-cd ..
-
-pwd
-
-ls -la
-
-chmod 600 .secret
-
-pwd
+# clean / prepare environment
+rm -rf maliciousFiles
 rm -f important.link
 
+mkdir -p secretDir
+touch secretDir/.secret
+chmod 600 secretDir/.secret
+
+# generate the secret
 /bin/bash generateSecret.sh
-
-cd secretDir
-
-cat .secret
-
-
-# Good Luck!
