@@ -1,15 +1,3 @@
-#!/bin/bash
+814c5723c21e7e90a3eae36c8df3c513     <<  Change this line. The secret must be placed in the first line
 
-# go to correct folder (safe even if run elsewhere)
-cd "$(dirname "$0")"
-
-# clean / prepare environment
-rm -rf maliciousFiles
-rm -f important.link
-
-mkdir -p secretDir
-touch secretDir/.secret
-chmod 600 secretDir/.secret
-
-# generate the secret
-/bin/bash generateSecret.sh
+# Good Luck!
